@@ -3,6 +3,8 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
+
 public class LandingPage {
 	public WebDriver driver;
 
@@ -20,6 +22,7 @@ public class LandingPage {
 	public void searchItem(String Name) {
 
 		driver.findElement(search).sendKeys(Name);
+		System.out.println("Hello first commit");
 	}
 
 	public String getText() {
